@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+body{
+  background-image: url(images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: 27vw 200vh;
+  font-family: Space Grotesk;
+  display: grid;
+  grid-template-columns: 11vw clamp(5vw, 35vw, 35vw) 5vw;
+  grid-template-rows: 5vw auto 3vw auto;
+}
+.card-front{
+  grid-column: 2/auto;
+  grid-row: 2/auto;
+  width: 30vw;
+  position: relative;
+
+  & #card-front{
+    width: 30vw;
+    border-radius: 1vw;
+    box-shadow: 0.1vw 0vw 4vw;
+  }
+
+  & #card-logo{
+    position: absolute;
+    width: 6vw;
+    left: 2.5vw;
+    top: 2vw;
+  }
+  & #card-numero{
+    position: absolute;
+    letter-spacing: 0.1vw;
+    font-size: 2vw;
+    font-weight: 600;
+    color: white;
+    top: 9vw;
+    left: 3vw;
+  }
+  & #card-nome{
+    position: absolute;
+    letter-spacing: 0.1vw;
+    white-space: nowrap;
+    font-size: 1vw;
+    font-weight: 500;
+    color: white;
+    top: 13vw;
+    left: 3vw;
+  }
+  & #card-validade{
+    position: absolute;
+    letter-spacing: 0.1vw;
+    font-size: 1vw;
+    font-weight: 500;
+    color: white;
+    top: 13vw;
+    left: 23.4vw;
+  }
+}
+.card-back{
+  grid-column: 2/auto;
+  grid-row: 4/auto;
+  position: relative;
+  width: 30vw;
+  left: 5vw;
+
+  & #card-back{
+    width: 30vw;
+    border-radius: 1vw;
+    box-shadow: 0.1vw 0vw 4vw;
+  }
+  & #card-cvv{
+    position: absolute;
+    font-size: 1vw;
+    font-weight: 600;
+    letter-spacing: 0.1vw;
+    white-space: nowrap;
+    color: grey;
+    top: 7.5vw;
+    left: 24vw;
+  }
+}
+#DadosCartao{
+  position: relative;
+  top: 5vw;
+  grid-column: 4/auto;
+  grid-row: 2/-1;
+  width: min-content;
+  font-family: Space Grotesk;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.Questoes{
+  font-size: 1.5vw;
+  letter-spacing: 0.1vw;
+
+  & #nome_cartao{
+    width: 20vw;
+    height: 2.5vw;
+    font-size: 1.2vw;
+    border: 1px solid grey;
+    border-radius: 5px;
+  }
+  & #numero_cartao{
+    width: 20vw;
+    height: 2.5vw;
+    font-size: 1.2vw;
+    border: 1px solid grey;
+    border-radius: 5px;
+  }
+  & #validade{
+    width: 10vw;
+    height: 2.5vw;
+    font-size: 1.2vw;
+    border: 1px solid grey;
+    border-radius: 5px;
+  }
+  & #cvv{
+    width: 7vw;
+    height: 2.5vw;
+    font-size: 1.2vw;
+    border: 1px solid grey;
+    border-radius: 5px;
+  }
+}
+.LB{
+  display: flex;
+  gap: 5.5vw;
+}
+.INP{
+  display: grid;
+  grid-template-columns: auto 6vw auto;
+  margin: 0%;
+  padding: 0%;
+
+  & #validade{
+    grid-column: 1/auto;
+    grid-row: 1/auto;
+  }
+
+  & #cvv{
+    grid-column: 2/auto;
+    grid-row: 1/auto;
+    width: 8vw;
+  }
+
+  & .val{
+    grid-column: 1/auto;
+  }
+
+  & .cvv{
+    grid-column: 2/auto;
+  }
+}
+.alertas{
+  grid-row: 2/auto;
+  display:none;
+  white-space: nowrap;
+  color: red;
+  font-size: 0.8vw;
+  font-weight: 200;
+  letter-spacing: 0px;
+  margin: 0%;
+  padding: 0%;
+  position: relative;
+  top: 0.3vw;
+}
+#enviarDados{
+  padding: 0%;
+  margin: 0%;
+  background-color: hsl(278, 68%, 11%);
+  font-size: 1.5vw;
+  color: white;
+  height: 3.5vw;
+  border: 1px solid black;
+  border-radius: 10px;
+  outline:none;
+}
+@keyframes pulse {
+  0%{
+    color: white;
+  }
+  50%{
+    color: violet;
+  }
+  100%{
+    color: purple;
+  }
+}
+#enviarDados:hover{
+  animation: pulse 2s infinite alternate;
+  outline: 1px solid purple;
+}
+
+#completo{
+  display: grid;
+  display: none;
+  width: 19.9vw;
+  height: 12.4vw;
+
+  & #confirmado{
+    width: 5vw;
+    position: relative;
+    margin: auto;
+    border-radius: 100%;
+  }
+
+  & #thanks{
+    font-size: 2vw;
+    color: hsl(278, 68%, 11%);
+    text-align: center;
+  }
+
+  & .msg{
+    text-align: center;
+    color: hsl(279, 6%, 55%);
+    font-size: 1vw;
+  }
+}

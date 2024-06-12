@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Compra</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="card-front">
+      <img src="images/card-logo.svg" alt="card-logo" id="card-logo">
+      <img src="images/bg-card-front.png" alt="bg-card-front" id="card-front">
+      <span id="card-numero">0000<span> </span>0000 0000 0000</span>
+      <span id="card-nome">NOME DO CARTAO</span>
+      <span id="card-validade">00/00</span>
+    </div>
+    <div class="card-back">
+      <img src="images/bg-card-back.png" alt="bg-card-back" id="card-back">
+      <span id="card-cvv">000</span>
+    </div>
+    <form action="POST" id="DadosCartao">
+      <span class="Questoes">
+        <label for="nome_cartao">Nome do cartao</label>
+        <input type="text" name="nome_cartao" id="nome_cartao" placeholder="Nome no cartao">
+        <span class="alertas vazio">O CAMPO N PODE ESTA VAZIO</span>
+      </span>
+      <span class="Questoes">
+        <label for="numero_cartao">Numero do Cartao</label>
+        <input type="text" name="numero_cartao" id="numero_cartao" placeholder="Ex. 1234 5678 9000 0000">
+        <span class="alertas vazio">O CAMPO N PODE ESTA VAZIO</span>
+      </span>
+      <span class="Questoes LB">
+        <label for="validade">Validade</label>
+        <label for="cvv" id="cvvConig">CVV</label>
+      </span>
+      <span class="Questoes INP">
+        <input type="text" name="validade" id="validade" placeholder="00/00">
+        <span class="alertas val">O CAMPO N PODE ESTA VAZIO</span>
+        <input type="text" name="cvv" id="cvv" placeholder="000">
+        <span class="alertas cvv">O CAMPO N PODE ESTA VAZIO</span>
+      </span>
+      <div id="completo">
+        <img src="images/icon-complete.svg" alt="Completo" id="confirmado">
+        <span id="thanks">Obrigado!</span>
+        <span class="msg">Podemos adicionar seu cartao</span>
+      </div>
+      <button type="button" id="enviarDados">Comprar</button>
+    </form>
+
+    <script src="JS/jquery-3.7.1.min.js.js"></script>
+    <script src="JS/style.js"></script>
+  </body>
+</html>
